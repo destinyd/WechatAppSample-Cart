@@ -1,10 +1,11 @@
 <!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view wx:for="{{goods}}" wx:for-item="good" class="good-list-item">
+    <view class="good" data-good-id="{{good.id}}" catchtap="bindViewTap">
+      <image class="good-avatar" src="{{good.img}}" background-size="cover"></image>
+      <view class="good-detail">
+        {{good.name}}
+      </view>
+    </view>
   </view>
 </view>
