@@ -1,0 +1,16 @@
+.page-good .page-good-wrapper{
+    position: absolute;
+    top: 50rpx;
+    bottom: 50rpx;
+    left: 30rpx;
+    right: 30rpx;
+    overflow-y: auto;
+    padding: 40rpx 0;
+}
+.page-good .detail-img-wrapper{
+  width: 80%;
+  margin: 0 auto 30rpx auto;
+}
+.page-good .detail_img{
+  width: 100%;
+}

@@ -1,6 +1,26 @@
 <!--index.wxml-->
-<view class="container page-shop">
-  <view class="header">
-    {{good_id}}
-  </view>
+<view class="container page-good">
+  <loading hidden="{{!loading}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+  <block wx:if="{{!loading}}">
+    <view class="header">
+        {{good.name}}
+    </view>
+    <view class="page-good-wrapper">
+        <view class="detail-img-wrapper">
+          <image class="detail_img" src="{{good.detail_img}}" background-size="cover" />
+        </view>
+        <view class="price">
+          {{good.price}}元 / {{good.unit}} 
+        </view>
+        <view class="desc">
+          {{good.desc || "暂无描述"}}
+        </view>
+    </view>
+    <!--悬浮操作-->
+    <view class="layout-bottom">
+        加入购物车
+    </view>
+  </block>
 </view>

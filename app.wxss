@@ -4,9 +4,20 @@
 } 
 .header{
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  border-bottom: 1px black solid;
+  /*border-bottom: 1px black solid;*/
+  position: absolute;
+  height: 50rpx;
+  top: 0;
+  width: 100%;
+}
+.layout-bottom{
+    position: absolute;
+    height: 50rpx;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
 }
 .navigator-hover {
   color:blue;

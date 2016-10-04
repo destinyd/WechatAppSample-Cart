@@ -3,8 +3,9 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
-    loading: true
+    loading: true,
+    good_id: null,
+    good: null
   },
   onLoad: function (options) { 
     this.setData({
@@ -12,4 +13,19 @@ Page({
       good: null
     })
   },
+  onReady: function(){
+    this.load();
+  },
+  load: function(){
+    console.log('load');
+    this.setData({
+        good: app.globalData.good_hash[this.data.good_id],
+        loading: false
+    })
+  },
+  loadingChange: function(){
+    this.setData({
+      loading: false
+    })
+  }
 })
