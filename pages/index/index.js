@@ -170,11 +170,11 @@ Page({
     ]
   },
   //事件处理函数
-  bindViewTap: function() {
-    console.log("bindViewTap")
-    // wx.navigateTo({
-    //   url: '../logs/logs'
-    // })
+  bindViewTap: function(e) {
+    var good_id = e.currentTarget.dataset.goodId;
+    wx.navigateTo({
+      url: '../goods/show?good_id=' + good_id,
+    })
   },
   onLoad: function () {
     console.log('onLoad')
