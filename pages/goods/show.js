@@ -29,22 +29,8 @@ Page({
     })
   },
   bind_add_to_cart: function(){
-    var cart = app.get_cart()
-    amount = Number(cart[this.data.good_id]) || 0
-    amount += 1
-    cart[this.data.good_id] = amount
-
-    that = this
-    wx.setStorage({
-      key: "cart",
-      data: cart,
-      success: function(){
-        that.set_show_toast(true)
-      },
-      fail: function(){
-        console.log("fail")
-      }
-    })
+    var good_id = this.data.good_id
+    app.change_amount(good_id, 1, this.show_toast)
   },
   toast2Change: function(){
     this.set_show_toast(false)
@@ -53,6 +39,9 @@ Page({
     this.setData({
       show_toast: b
     })
+  },
+  show_toast: function(){
+    this.set_show_toast(true);
   },
   handle_click_cart_icon: app.handle_click_cart_icon
 })

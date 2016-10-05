@@ -1,13 +1,13 @@
 <view class="container page-cart">
   <view wx:for="{{goods}}" wx:for-item="good" class="cart-list-item">
-    <view class="cart-item" data-good-id="{{good.id}}">
+    <view class="cart-item" data-good-id="{{good.id}}" catchtap="handle_click" wx:if="{{cart[good.id]}}">
       <view class="name">
         {{good.name}}
       </view>
       <view class="amount">
-        <image class="icon minus" src="/minus.png" background-size="cover" />
+        <image class="icon minus" src="/minus.png" background-size="cover" id="btn-minus-{{good.id}}" />
         {{cart[good.id] || 0}}
-        <image class="icon plus" src="/plus.png" background-size="cover" />
+        <image class="icon plus" src="/plus.png" background-size="cover" id="btn-plus-{{good.id}}" />
       </view>
       <view class="price">
         {{good.price}}

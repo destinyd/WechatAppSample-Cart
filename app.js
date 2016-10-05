@@ -201,5 +201,36 @@ App({
   },
   get_good: function(good_id){
     return this.globalData.good_hash[good_id.toString()]
+  },
+  get_amount: function(good_id){
+    var cart = this.get_cart()
+    return cart[good_id] || 0
+  },
+  set_amount: function(good_id, amount, success, fail){
+    var cart = this.get_cart()
+    if(amount > 99){
+      amount = 99
+    }
+    if(amount < 0)
+    {
+      amount = 0
+    }
+    if(amount == 0){
+      delete(cart[good_id])
+    }
+    else{
+      cart[good_id] = amount
+    }
+    wx.setStorage({
+      key: "cart",
+      data: cart,
+      success: success,
+      fail: fail
+    })
+  },
+  change_amount: function(good_id, plus, success, fail){
+    var amount = this.get_amount(good_id)
+    amount += plus
+    this.set_amount(good_id, amount, success, fail)
   }
 })
