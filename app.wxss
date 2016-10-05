@@ -19,6 +19,20 @@
     text-align: center;
     bottom: 0;
 }
+.btn{
+    line-height: 50px;
+    padding: 0 10px;
+    height: 50px;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #1B1C1D;
+}
+.btn.primary{
+    background-color: #FB4E44;
+}
+.layout-bottom .btn{
+    float: right;
+}
 .navigator-hover {
   color:blue;
 }
