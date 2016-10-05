@@ -3,7 +3,7 @@
   <loading hidden="{{!loading}}" bindchange="loadingChange">
     加载中...
   </loading>
-  <toast hidden="{{!show_toast}}" duration="2000" bindchange="toast2Change">
+  <toast hidden="{{!show_toast}}" duration="800" bindchange="toast2Change">
     成功添加至购物车！
   </toast>  
   <block wx:if="{{!loading}}">
