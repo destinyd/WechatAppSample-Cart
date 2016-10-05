@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<image class="cart_icon" src="/cart.png" mode="aspectFill" />
 <view class="container page-good">
   <loading hidden="{{!loading}}" bindchange="loadingChange">
     加载中...
