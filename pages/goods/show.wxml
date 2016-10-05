@@ -3,6 +3,9 @@
   <loading hidden="{{!loading}}" bindchange="loadingChange">
     加载中...
   </loading>
+  <toast hidden="{{!show_toast}}" duration="2000" bindchange="toast2Change">
+    成功添加至购物车！
+  </toast>  
   <block wx:if="{{!loading}}">
     <view class="header">
         {{good.name}}
@@ -18,7 +21,7 @@
         <view class="desc">
           {{good.desc || "暂无描述"}}
         </view>
-        <view class="btn primary">
+        <view class="btn primary" catchtap="bind_add_to_cart">
           加入购物车
         </view>
     </view>

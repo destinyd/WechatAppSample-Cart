@@ -190,5 +190,8 @@ App({
         "detail_img": "http://o6wlxof9f.bkt.clouddn.com/i/of0yhZCz.jpg-d"
       }
     }
+  },
+  get_cart: function(){
+    return wx.getStorageSync("cart") || {}
   }
 })
