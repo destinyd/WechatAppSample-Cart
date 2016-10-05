@@ -167,7 +167,7 @@ Page({
         "img": "http://o6wlxof9f.bkt.clouddn.com/i/AKBAOzJZ.jpg-g",
         "detail_img": "http://o6wlxof9f.bkt.clouddn.com/i/AKBAOzJZ.jpg-d"
       }
-    ]
+    ],
   },
   //事件处理函数
   bindViewTap: function(e) {
@@ -186,5 +186,6 @@ Page({
         userInfo:userInfo
       })
     })
-  }
+  },
+  handle_click_cart_icon: app.handle_click_cart_icon
 })

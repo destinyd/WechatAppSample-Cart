@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<image class="cart_icon" src="/cart.png" mode="aspectFill" />
+<include src="/shared/cart_icon.wxml" />
 <view class="container">
   <view wx:for="{{goods}}" wx:for-item="good" class="good-list-item">
     <view class="good" data-good-id="{{good.id}}" catchtap="bindViewTap">

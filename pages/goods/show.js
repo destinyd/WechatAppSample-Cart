@@ -56,5 +56,6 @@ Page({
     this.setData({
       show_toast: b
     })
-  }
+  },
+  handle_click_cart_icon: app.handle_click_cart_icon
 })

@@ -193,5 +193,8 @@ App({
   },
   get_cart: function(){
     return wx.getStorageSync("cart") || {}
+  },
+  handle_click_cart_icon: function(){
+    console.log("click_cart_icon")
   }
 })

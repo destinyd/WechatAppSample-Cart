@@ -1,0 +1,1 @@
+<image class="cart_icon" src="/cart.png" mode="aspectFill" catchtap="handle_click_cart_icon" />
