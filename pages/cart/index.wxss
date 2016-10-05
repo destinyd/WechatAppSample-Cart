@@ -29,3 +29,7 @@
     text-align: right;
     padding-left: 10rpx;
 }
+.page-cart .total{
+    color: red;
+    font-size: 1.2rem;
+}
