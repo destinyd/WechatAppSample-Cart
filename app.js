@@ -195,6 +195,11 @@ App({
     return wx.getStorageSync("cart") || {}
   },
   handle_click_cart_icon: function(){
-    console.log("click_cart_icon")
+    wx.navigateTo({
+      url: '../cart/index',
+    })
+  },
+  get_good: function(good_id){
+    return this.globalData.good_hash[good_id.toString()]
   }
 })
