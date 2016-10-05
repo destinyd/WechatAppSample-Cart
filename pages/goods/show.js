@@ -30,10 +30,7 @@ Page({
   },
   bind_add_to_cart: function(){
     var cart = app.get_cart()
-    console.log(cart)
-    console.log(cart[this.data.good_id])
-    console.log(typeof(cart[this.data.good_id]))
-    amount = Number(cart[this.data.good_id])
+    amount = Number(cart[this.data.good_id]) || 0
     amount += 1
     cart[this.data.good_id] = amount
 
